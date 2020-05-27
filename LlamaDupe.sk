@@ -8,9 +8,9 @@ command /dupe:
 	cooldown bypass: dupe.nocooldown
 	
 	trigger:
-		if the player's inventory doesn't have space for wood:
+		if the player doesn't have enough space for 1 feather:
 			send "lol inventory full"
 			cancel command cooldown
-		
 		else:
-			give item amount of player's held item of player's held item to the player
+			set {_i} to item amount of player's held item
+			give {_i} of player's held item to player

@@ -1,0 +1,16 @@
+on right click on llama:
+    make player execute "/dupe"
+
+command /dupe:
+	description: Dupes
+	cooldown: 0.001 minutes
+	cooldown message: Stop spamming!
+	cooldown bypass: dupe.nocooldown
+	
+	trigger:
+		if the player's inventory doesn't have space for wood:
+			send "lol inventory full"
+			cancel command cooldown
+		
+		else:
+			give item amount of player's held item of player's held item to the player

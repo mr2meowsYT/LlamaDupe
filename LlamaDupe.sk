@@ -4,12 +4,12 @@ on right click on llama:
 command /dupe:
 	description: Dupes
 	cooldown: 0.001 minutes
-	cooldown message: Stop spamming!
+	cooldown message: /dupe is on cooldown
 	cooldown bypass: dupe.nocooldown
 	
 	trigger:
 		if the player doesn't have enough space for 1 feather:
-			send "lol inventory full"
+			send "not enough inventory space!"
 			cancel command cooldown
 		else:
 			set {_i} to item amount of player's held item
